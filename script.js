@@ -124,7 +124,7 @@ const slots = ['first', 'second', 'third'];
                         if(ev.target.innerHTML != '' && ev.target.nodeName != 'OL')
                         {
                             selectedLis.push(ev.target);
-                            console.dir(selectedLis)
+                            //console.dir(selectedLis)
                         }
                             //selectedLis.push(ev.target);
                     }
