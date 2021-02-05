@@ -114,13 +114,19 @@ const slots = ['first', 'second', 'third'];
 
             function clickSelect(ev) {
                 //select lis and color
-                if(ev.target.className === '' ||ev.target.className === 'grey' )
+                if(ev.target.className === '' || ev.target.className === 'grey' )
                 {
                     if(ev.target.innerHTML != '' && ev.target.nodeName === 'LI')
                         ev.target.className = 'red';
+
                     if(ev.target.id != 'left' && ev.target.id != 'right')
                     {
-                        selectedLis.push(ev.target);
+                        if(ev.target.innerHTML != '' && ev.target.nodeName != 'OL')
+                        {
+                            selectedLis.push(ev.target);
+                            console.dir(selectedLis)
+                        }
+                            //selectedLis.push(ev.target);
                     }
                 }
                 else //revert and deselect
